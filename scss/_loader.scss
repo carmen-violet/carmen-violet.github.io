@@ -1,0 +1,61 @@
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10000;
+    -webkit-animation: fade-out 1s ease-in-out 2s forwards;
+    -moz-animation: fade-out 1s ease-in-out 2s forwards;
+    -o-animation: fade-out 1s ease-in-out 2s forwards;
+    animation: fade-out 1s ease-in-out 2s forwards;
+}
+
+.loader-wrapper {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+}
+
+.loader-heart {
+    position: absolute;
+    font-size: 3em;
+    color: $color-bluepinkpalette-1;
+    opacity: 0.2;
+    transform: scale(0);
+    -webkit-animation-name: expand-50;
+    -moz-animation-name: expand-50;
+    -o-animation-name: expand-50;
+    animation-name: expand-50;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    @media (max-width: 900px) {
+        -webkit-animation-name: expand-20;
+        -moz-animation-name: expand-20;
+        -o-animation-name: expand-20;
+        animation-name: expand-20;
+    }
+
+    @media (min-width: 2000px) {
+        -webkit-animation-name: expand-150;
+        -moz-animation-name: expand-150;
+        -o-animation-name: expand-150;
+        animation-name: expand-150;
+    }
+}

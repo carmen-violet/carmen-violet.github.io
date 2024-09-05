@@ -1,0 +1,29 @@
+{
+  "name": "francescoecarmen",
+  "version": "1.0.0",
+  "description": "Carmen and Francesco's wedding website",
+  "main": "index.html",
+  "scripts": {
+    "watch": "sass --watch scss:css --style expanded",
+    "build": "sass scss:css --style compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoMengoli/elisa-ha-detto-si.git"
+  },
+  "keywords": [
+    "Carmen",
+    "Francesco",
+    "Wedding"
+  ],
+  "author": "Marco Mengoli, Carmen Squillaci",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/MarcoMengoli/elisa-ha-detto-si/issues"
+  },
+  "homepage": "https://github.com/MarcoMengoli/elisa-ha-detto-si#readme",
+  "devDependencies": {
+    "sass": "^1.78.0"
+  }
+}

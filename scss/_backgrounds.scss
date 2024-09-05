@@ -1,0 +1,41 @@
+%background-image-full-width {
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    overflow: hidden;
+}
+
+.background-image-1 {
+    @extend %background-image-full-width;
+    background-image: url("../images/background-1.jpg");
+}
+
+.background-image-2 {
+    @extend %background-image-full-width;
+    background-image: url("../images/background-2.jpg");
+}
+
+.background-image-3 {
+    @extend %background-image-full-width;
+    background-image: url("../images/background-3.jpg");
+}
+
+.background-image-4 {
+    @extend %background-image-full-width;
+    background-image: url("../images/background-4.jpg");
+}
+
+.background-image-5 {
+    @extend %background-image-full-width;
+    background-image: url("../images/background-5.jpg");
+}
+
+.background-image-6 {
+    @extend %background-image-full-width;
+    background-image: url("../images/background-6.jpg");
+}
+
+.background-image-7 {
+    @extend %background-image-full-width;
+    background-image: url("../images/background-7.jpg");
+}

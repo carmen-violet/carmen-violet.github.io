@@ -1,0 +1,110 @@
+.date-container {
+    h2 {
+        text-align: center;
+        font-family: $font-title;
+        font-weight: 500;
+        color: $color-font-primary;
+        margin: 2em 0 0 0;
+        font-size: 5em;
+
+        @media (orientation: portrait) and (min-width: 1000px) {
+            font-size: 7em;
+        }
+        @media (orientation: portrait) and (max-width: 900px) {
+            font-size: 5em;
+        }
+        @media (orientation: portrait) and (max-width: 500px) {
+            font-size: 3.1em;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-family: $font-countdown;
+        font-weight: 400;
+        color: $color-font-primary;
+
+        text-shadow: 0.04em 0.04em 0.08em rgba(0, 0, 0, 0.8);
+
+        margin: -0.2em 0 0 0;
+        font-size: 1.3em;
+
+        @media (orientation: portrait) {
+            font-size: 3em;
+        }
+        @media (orientation: portrait) and (max-width: 900px) {
+            font-size: 2em;
+        }
+        @media (orientation: portrait) and (max-width: 500px) {
+            font-size: 1.3em;
+        }
+    }
+}
+
+.countdown {
+    color: $color-font-primary;
+    font-size: 1.1em;
+    font-family: $font-countdown;
+    text-align: center;
+
+    margin: 3em 0 2em 0;
+
+    @extend %flex-row-centered;
+
+    @media (orientation: portrait) {
+        flex-direction: column;
+        margin: 7em 0 7em 0;
+    }
+    @media (orientation: portrait) and (max-width: 900px) {
+        flex-direction: column;
+        margin: 3.5em 0 3.5em 0;
+    }
+    @media (orientation: portrait) and (max-width: 500px) {
+        flex-direction: column;
+        margin: 2.5em 0 4em 0;
+    }
+
+    .cd-element {
+        text-transform: uppercase;
+        padding: 0 1.2em;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 1em;
+        font-weight: 500;
+        width: 7em;
+        height: 7em;
+        margin: 0 0.6em;
+        @extend %flex-column-centered;
+
+        @media (orientation: portrait) {
+            font-size: 1.6em;
+            width: 20vw;
+            height: 20vw;
+            margin: 0.3em auto;
+            font-weight: 400;
+        }
+        @media (orientation: portrait) and (max-width: 900px) {
+            font-size: 1.3em;
+        }
+        @media (orientation: portrait) and (max-width: 500px) {
+            font-size: 0.8em;
+            width: 25vw;
+            height: 25vw;
+        }
+
+        &-number {
+            font-size: 2.4em;
+        }
+
+        &-label {
+            font-size: 0.8em;
+            padding-bottom: 0.7em;
+        }
+    }
+}
+
+#countdown-after-datetime {
+    display: none;
+    font-size: 2em;
+    padding: 0 0.25rem;
+    letter-spacing: 0.5em;
+}

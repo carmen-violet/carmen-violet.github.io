@@ -1,0 +1,90 @@
+// https://coolors.co/fec5bb-fcd5ce-fae1dd-f8edeb-e8e8e4-d8e2dc-ece4db-ffe5d9-ffd7ba-fec89a
+$color-peachpalette-1: #fec5bb; // Melon
+$color-peachpalette-2: #fcd5ce; // Pale pink
+$color-peachpalette-3: #fae1dd; // Misty rose
+$color-peachpalette-4: #f8edeb; // Isabelline
+$color-peachpalette-5: #e8e8e4; // Platinum
+$color-peachpalette-6: #d8e2dc; // Alabaster
+$color-peachpalette-7: #ece4db; // Linen
+$color-peachpalette-8: #ffe5d9; // Champagne pink
+$color-peachpalette-9: #ffd7ba; // Peach puff
+$color-peachpalette-10: #fec89a; // Peach crayola
+
+// https://coolors.co/cdb4db-ffc8dd-ffafcc-bde0fe-a2d2ff
+$color-bluepinkpalette-1: #cdb4db; // Pink lavander
+$color-bluepinkpalette-2: #ffc8dd; // Orchid pink
+$color-bluepinkpalette-3: #ffafcc; // Nadeshiko pink
+$color-bluepinkpalette-4: #bde0fe; // Uranian blue
+$color-bluepinkpalette-5: #a2d2ff; // Baby blue eyes
+
+// https://coolors.co/f191ac-f6a6bb-f4bbc9-fae6e7-f7eeed
+$color-pinkshadepalette-1: #f191ac; // Vanilla ice
+$color-pinkshadepalette-2: #f6a6bb; // Nadeshiko pink
+$color-pinkshadepalette-3: #f4bbc9; // Cameo pink
+$color-pinkshadepalette-4: #fae6e7; // Misty rose
+$color-pinkshadepalette-5: #f7eeed; // Isabelline
+
+// https://coolors.co/ffffff-ffcad4-b0d0d3-c08497-f7af9d
+$color-pucepalette-1: #ffffff; // White
+$color-pucepalette-2: #ffcad4; // Pink
+$color-pucepalette-3: #b0d0d3; // Light blue
+$color-pucepalette-4: #c08497; // Puce
+$color-pucepalette-5: #f7af9d; // Melon
+$color-pucepalette-6: #4b2c36; // Puce dark
+
+$transparent: rgba(255, 255, 255, 0);
+
+$color-font-primary: #ffffff;
+$color-font-text: $color-bluepinkpalette-1;
+$color-font-details-title: $color-bluepinkpalette-1;
+$color-background: $color-bluepinkpalette-1;
+$color-background-lighter: #ffffff;
+$color-background-darker: $color-bluepinkpalette-1;
+$color-background-soft: $color-bluepinkpalette-1;
+$color-snackbar: $color-bluepinkpalette-1;
+
+$font-title: "Allura", cursive;
+$font-countdown: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+$font-text: "Allura", cursive;
+$font-subtitles: "Handlee", cursive;
+
+%fullSpace {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+%display-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+%flex-row-centered {
+    @extend %display-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+%flex-column-centered {
+    @extend %display-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+%flex-stretched {
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+%flex-spaced {
+    align-items: space-evenly;
+    justify-content: space-evenly;
+}

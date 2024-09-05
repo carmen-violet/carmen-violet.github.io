@@ -1,0 +1,315 @@
+.us-container {
+    display: grid;
+    grid-template-columns: 2fr 10fr 15fr 10fr 2fr;
+    grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
+    @extend %fullSpace;
+
+    @media (orientation: portrait) {
+        grid-template-columns: 1fr 1fr 10fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr auto 3fr 1fr;
+    }
+}
+
+.us-middle-background {
+    background-color: $color-background-soft;
+    opacity: 0.5;
+    z-index: 0;
+    grid-row: 3/4;
+    grid-column: 2/5;
+    -webkit-box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
+    -moz-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
+    box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
+
+    @media (orientation: portrait) {
+        grid-row: 2/5;
+        grid-column: 2/5;
+    }
+}
+
+.us-story {
+    background-color: $color-background-lighter;
+    -webkit-box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
+    -moz-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
+    box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
+
+    z-index: 10;
+
+    grid-row: 2/5;
+    grid-column: 3/4;
+
+    padding: 2em 0;
+
+    @extend %flex-column-centered;
+
+    @media (orientation: portrait) {
+        grid-row: 3/4;
+        grid-column: 3/4;
+    }
+}
+
+.story-element {
+    color: $color-font-text;
+    text-align: center;
+
+    &-title {
+        font-size: 3em;
+        font-family: $font-title;
+        color: $color-background;
+
+        @media (orientation: portrait) {
+            font-size: 6em;
+        }
+        @media (orientation: portrait) and (max-width: 900px) {
+            font-size: 3.2em;
+        }
+        @media (orientation: portrait) and (max-width: 500px) {
+            font-size: 2.1em;
+        }
+        @media (orientation: landscape) and (max-width: 1500px) {
+            font-size: 2.5em;
+        }
+        @media (orientation: landscape) and (max-width: 900px) {
+            font-size: 2.2em;
+        }
+    }
+
+    &-subtitle {
+        font-size: 1.2em;
+        color: $color-font-details-title;
+        font-family: $font-subtitles;
+
+        @media (orientation: portrait) {
+            font-size: 2.5em;
+        }
+        @media (orientation: portrait) and (max-width: 900px) {
+            font-size: 1.6em;
+        }
+        @media (orientation: portrait) and (max-width: 500px) {
+            font-size: 1em;
+        }
+    }
+
+    &-description {
+        font-size: 1em;
+        font-family: $font-subtitles;
+        padding-top: 1em;
+
+        @media (orientation: portrait) {
+            font-size: 2.4em;
+        }
+        @media (orientation: portrait) and (max-width: 900px) {
+            font-size: 1.2em;
+        }
+        @media (orientation: portrait) and (max-width: 500px) {
+            font-size: 0.8em;
+        }
+    }
+
+    &-line-separator {
+        height: 3em;
+        width: 1px;
+        background-color: $color-background-soft;
+        margin: 0.8em auto;
+    }
+}
+
+.avatar {
+    grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    z-index: 5;
+
+    margin: 0 3em;
+    @media (orientation: landscape) and (max-width: 900px) {
+        margin: 0 0.5em;
+    }
+
+    &-left {
+        grid-column: 2/3;
+
+        @media (orientation: portrait) {
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+    }
+    &-right {
+        grid-column: 4/5;
+
+        @media (orientation: portrait) {
+            grid-column: 3/4;
+            grid-row: 4/5;
+        }
+    }
+}
+
+.avatar-figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    figcaption {
+        text-align: center;
+        font-family: $font-title;
+        color: $color-font-details-title;
+        font-weight: 200;
+        margin: 0;
+        font-size: 4em;
+
+        @media (orientation: portrait) {
+            font-size: 7em;
+            margin: -0.4em 0 0.4em 0;
+        }
+        @media (orientation: portrait) and (max-width: 900px) {
+            font-size: 5em;
+            margin: 0 0 0.3em 0;
+        }
+        @media (orientation: portrait) and (max-width: 500px) {
+            font-size: 3.3em;
+            margin: 0 0 0.4em 0;
+        }
+        @media (orientation: landscape) and (max-width: 900px) {
+            font-size: 2.3em;
+            margin: 0 0 0.4em 0;
+        }
+        @media (orientation: landscape) and (max-aspect-ratio: 5/4) {
+            font-size: 3em;
+            margin: 0 0 0.4em 0;
+        }
+    }
+
+    .rounded-image {
+        width: 20vw;
+        border-radius: 50%;
+
+        @media (min-width: 1800px) {
+            max-width: 300px;
+        }
+
+        @media (orientation: portrait) {
+            width: 35vw;
+            margin: 3em 0 3em 0;
+        }
+        @media (orientation: portrait) and (max-width: 900px) {
+            width: 40vw;
+            margin: 3em 0 0.7em 0;
+        }
+        @media (orientation: portrait) and (max-width: 500px) {
+            width: 50vw;
+            margin: 3em 0 0em 0;
+        }
+        @media (orientation: landscape) and (max-width: 900px) {
+            width: 20vw;
+            margin: 3em 0 0em 0;
+        }
+
+        @media (orientation: landscape) and (max-aspect-ratio: 5/4) {
+            width: 15vw;
+            margin: 3em 0 0em 0;
+        }
+    }
+
+    .us-sparkle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: transparent;
+        background-image: url(../images/sparkle-1.png),
+            url(../images/sparkle-2.png);
+
+        -webkit-animation: sparkle-move 60s linear infinite;
+        -moz-animation: sparkle-move 60s linear infinite;
+        -o-animation: sparkle-move 60s linear infinite;
+        animation: sparkle-move 60s linear infinite;
+    }
+}
+
+.pulsing-hearts-wrapper {
+    width: 3em;
+    height: 3em;
+
+    @media (min-width: 1500px), (min-height: 1500px) {
+        width: 4em;
+        height: 4em;
+    }
+}
+.us-heart {
+    position: absolute;
+    color: $color-background;
+    opacity: 0.5;
+
+    font-size: 3em;
+    @media (min-width: 1500px), (min-height: 1500px) {
+        font-size: 4em;
+    }
+}
+
+@-webkit-keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -200px -400px, 300px 300px;
+    }
+}
+@-moz-keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -400px -400px, 300px 300px;
+    }
+}
+@-o-keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -400px -400px, 300px 300px;
+    }
+}
+@-ms-keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -400px -400px, 300px 300px;
+    }
+}
+@keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -400px -400px, 300px 300px;
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -o-animation-name: pulse;
+    animation-name: pulse;
+
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
+
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
