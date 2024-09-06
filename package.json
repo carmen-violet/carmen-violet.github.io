@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarcoMengoli/elisa-ha-detto-si.git"
+    "url": "git+https://github.com/carmen-violet/carmen-violet.github.io"
   },
   "keywords": [
     "Carmen",
@@ -20,9 +20,9 @@
   "author": "Marco Mengoli, Carmen Squillaci",
   "license": "LGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/MarcoMengoli/elisa-ha-detto-si/issues"
+    "url": "https://github.com/carmen-violet/carmen-violet.github.io"
   },
-  "homepage": "https://github.com/MarcoMengoli/elisa-ha-detto-si#readme",
+  "homepage": "https://github.com/carmen-violet/carmen-violet.github.io#readme",
   "devDependencies": {
     "sass": "^1.78.0"
   }
